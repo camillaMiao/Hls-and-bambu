@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/./sim/autowrap/testbench/myproject_axi.cpp_pre.cpp.tb.cpp

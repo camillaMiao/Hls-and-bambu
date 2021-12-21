@@ -1,0 +1,11 @@
+digraph G {
+0[shape=box, label="myproject\nMEMORY:\nw2\ninternal_423023"];
+1[shape=box, label="dense_input_bambu_artificial_ParmMgr_Read_array"];
+2[shape=box, label="layer2_out_bambu_artificial_ParmMgr_Write_array"];
+3[shape=box, label="const_size_in_1_bambu_artificial_ParmMgr_Write_valid"];
+4[shape=box, label="const_size_out_1_bambu_artificial_ParmMgr_Write_valid"];
+0->1 [color=blue, label="DIRECT: \n423458"];
+0->2 [color=blue, label="DIRECT: \n423472\n423475\n423478\n423481"];
+0->3 [color=blue, label="DIRECT: \n423495"];
+0->4 [color=blue, label="DIRECT: \n423508"];
+}

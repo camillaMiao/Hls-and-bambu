@@ -1,0 +1,1105 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Dec 21 12:07:03 2021
+# Process ID: 2804971
+# Current directory: /home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj
+# Command line: vivado -mode batch -source vivado_synth.tcl
+# Log file: /home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/vivado.log
+# Journal file: /home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/vivado.jou
+#-----------------------------------------------------------
+source vivado_synth.tcl
+# add_files myproject_prj/solution1/syn/vhdl
+# synth_design -top myproject -part xc7z020clg400-1
+Command: synth_design -top myproject -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2804987 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1599.730 ; gain = 162.637 ; free physical = 132990 ; free virtual = 244622
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myproject' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:30]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:41]
+INFO: [Synth 8-3491] module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:12' bound to instance 'grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_26' of component 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 11 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_11ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_11ns_16s_26_2_0_U1' of component 'myproject_axi_mul_11ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:774]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_11ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 11 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_11ns_16s_26_2_0_MulnS_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:9' bound to instance 'myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U' of component 'myproject_axi_mul_11ns_16s_26_2_0_MulnS_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_11ns_16s_26_2_0_MulnS_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_11ns_16s_26_2_0_MulnS_0' (1#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_11ns_16s_26_2_0' (2#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U2' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:789]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0_MulnS_1' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:9' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U' of component 'myproject_axi_mul_10ns_16s_26_2_0_MulnS_1' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_10ns_16s_26_2_0_MulnS_1' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_10ns_16s_26_2_0_MulnS_1' (3#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_10ns_16s_26_2_0' (4#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8ns_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8ns_16s_24_2_0_U3' of component 'myproject_axi_mul_8ns_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:804]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_8ns_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8ns_16s_24_2_0_MulnS_2' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:9' bound to instance 'myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U' of component 'myproject_axi_mul_8ns_16s_24_2_0_MulnS_2' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_8ns_16s_24_2_0_MulnS_2' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_8ns_16s_24_2_0_MulnS_2' (5#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_8ns_16s_24_2_0' (6#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U4' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:819]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0_MulnS_3' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:9' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U' of component 'myproject_axi_mul_10s_16s_26_2_0_MulnS_3' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_10s_16s_26_2_0_MulnS_3' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_10s_16s_26_2_0_MulnS_3' (7#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_10s_16s_26_2_0' (8#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_7ns_16s_23_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:43' bound to instance 'myproject_axi_mul_7ns_16s_23_2_0_U5' of component 'myproject_axi_mul_7ns_16s_23_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:834]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_7ns_16s_23_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_7ns_16s_23_2_0_MulnS_4' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:9' bound to instance 'myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U' of component 'myproject_axi_mul_7ns_16s_23_2_0_MulnS_4' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_7ns_16s_23_2_0_MulnS_4' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_7ns_16s_23_2_0_MulnS_4' (9#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_7ns_16s_23_2_0' (10#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U6' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:849]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U7' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:864]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0_MulnS_5' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:9' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U' of component 'myproject_axi_mul_9ns_16s_25_2_0_MulnS_5' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_9ns_16s_25_2_0_MulnS_5' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_9ns_16s_25_2_0_MulnS_5' (11#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_9ns_16s_25_2_0' (12#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8ns_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8ns_16s_24_2_0_U8' of component 'myproject_axi_mul_8ns_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:879]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U9' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:894]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9s_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9s_16s_25_2_0_U10' of component 'myproject_axi_mul_9s_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:909]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_9s_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9s_16s_25_2_0_MulnS_6' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:9' bound to instance 'myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U' of component 'myproject_axi_mul_9s_16s_25_2_0_MulnS_6' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_9s_16s_25_2_0_MulnS_6' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_9s_16s_25_2_0_MulnS_6' (13#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_9s_16s_25_2_0' (14#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U11' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:924]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 11 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_11ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_11ns_16s_26_2_0_U12' of component 'myproject_axi_mul_11ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:939]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U13' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:954]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U14' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:969]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8ns_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8ns_16s_24_2_0_U15' of component 'myproject_axi_mul_8ns_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:984]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U16' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:999]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U17' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1014]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U18' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1029]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U19' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1044]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U20' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1059]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8ns_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8ns_16s_24_2_0_U21' of component 'myproject_axi_mul_8ns_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1074]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U22' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1089]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U23' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1104]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9s_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9s_16s_25_2_0_U24' of component 'myproject_axi_mul_9s_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1119]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U25' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1134]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U26' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1149]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U27' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1164]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9s_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9s_16s_25_2_0_U28' of component 'myproject_axi_mul_9s_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1179]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U29' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1194]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U30' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1209]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U31' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1224]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U32' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1239]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9s_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9s_16s_25_2_0_U33' of component 'myproject_axi_mul_9s_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1254]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U34' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1269]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U35' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1284]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U36' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1299]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U37' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1314]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8ns_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8ns_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8ns_16s_24_2_0_U38' of component 'myproject_axi_mul_8ns_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1329]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_7ns_16s_23_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_7ns_16s_23_2_0.vhd:43' bound to instance 'myproject_axi_mul_7ns_16s_23_2_0_U39' of component 'myproject_axi_mul_7ns_16s_23_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1344]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9s_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9s_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9s_16s_25_2_0_U40' of component 'myproject_axi_mul_9s_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1359]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U41' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1374]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8s_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8s_16s_24_2_0_U42' of component 'myproject_axi_mul_8s_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1389]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_8s_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8s_16s_24_2_0_MulnS_7' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:9' bound to instance 'myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U' of component 'myproject_axi_mul_8s_16s_24_2_0_MulnS_7' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_8s_16s_24_2_0_MulnS_7' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_8s_16s_24_2_0_MulnS_7' (15#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_8s_16s_24_2_0' (16#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U43' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1404]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U44' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1419]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 11 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_11ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_11ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_11ns_16s_26_2_0_U45' of component 'myproject_axi_mul_11ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1434]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_9ns_16s_25_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_9ns_16s_25_2_0.vhd:43' bound to instance 'myproject_axi_mul_9ns_16s_25_2_0_U46' of component 'myproject_axi_mul_9ns_16s_25_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1449]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U47' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1464]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_8s_16s_24_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_8s_16s_24_2_0.vhd:43' bound to instance 'myproject_axi_mul_8s_16s_24_2_0_U48' of component 'myproject_axi_mul_8s_16s_24_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1479]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10ns_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10ns_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10ns_16s_26_2_0_U49' of component 'myproject_axi_mul_10ns_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1494]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_10s_16s_26_2_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_10s_16s_26_2_0.vhd:43' bound to instance 'myproject_axi_mul_10s_16s_26_2_0_U50' of component 'myproject_axi_mul_10s_16s_26_2_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:1509]
+INFO: [Synth 8-256] done synthesizing module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' (17#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'myproject' (18#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:30]
+WARNING: [Synth 8-3331] design myproject_axi_mul_10s_16s_26_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_10ns_16s_26_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_8s_16s_24_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_9ns_16s_25_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_11ns_16s_26_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_9s_16s_25_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_7ns_16s_23_2_0 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_mul_8ns_16s_24_2_0 has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1664.480 ; gain = 227.387 ; free physical = 132960 ; free virtual = 244603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1664.480 ; gain = 227.387 ; free physical = 132952 ; free virtual = 244597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1672.484 ; gain = 235.391 ; free physical = 132951 ; free virtual = 244596
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1681.391 ; gain = 244.297 ; free physical = 132873 ; free virtual = 244523
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     26 Bit       Adders := 4     
+	   3 Input     25 Bit       Adders := 2     
+	   3 Input     24 Bit       Adders := 2     
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   3 Input     22 Bit       Adders := 2     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 17    
+	   3 Input     16 Bit       Adders := 20    
+	   2 Input     15 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 94    
+	               15 Bit    Registers := 17    
+	               14 Bit    Registers := 11    
+	               13 Bit    Registers := 4     
+	               12 Bit    Registers := 3     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module myproject 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     26 Bit       Adders := 4     
+	   3 Input     25 Bit       Adders := 2     
+	   3 Input     24 Bit       Adders := 2     
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   3 Input     22 Bit       Adders := 2     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 17    
+	   3 Input     16 Bit       Adders := 20    
+	   2 Input     15 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 94    
+	               15 Bit    Registers := 17    
+	               14 Bit    Registers := 11    
+	               13 Bit    Registers := 4     
+	               12 Bit    Registers := 3     
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe28))'.
+DSP Report: register tmp_13_reg_12922_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_13_reg_12922_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U14/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x1db))'.
+DSP Report: register tmp_14_reg_12931_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_14_reg_12931_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U37/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg, operation Mode is: (A''*(B:0x46))'.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register tmp_11_reg_12907_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/tmp_product is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U15/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x1f3))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_12_reg_12913_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U49/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe3c))'.
+DSP Report: register tmp_1_reg_12887_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_1_reg_12887_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U43/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg, operation Mode is: (A''*(B:0x21c))'.
+DSP Report: register tmp_10_reg_12895_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: register tmp_10_reg_12895_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/tmp_product is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U12/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg, operation Mode is: (A''*(B:0x3ff15))'.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register tmp_9_reg_12874_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/tmp_product is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U40/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0xc9))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_7_reg_12859_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U18/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe07))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_8_reg_12868_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U35/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x1d0))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_5_reg_12843_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U6/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0xdc))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_3_reg_12831_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U32/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg, operation Mode is: (A''*(B:0x51))'.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register tmp_4_reg_12837_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/tmp_product is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U21/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9s_16s_25_2_0_U28/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg, operation Mode is: (A2*(B:0x3ff16))'.
+DSP Report: register data_V_read_int_reg_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U28/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U28/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U28/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9s_16s_25_2_0_U28/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/tmp_product is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U28/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg, operation Mode is: (A2*(B:0x3ffa2))'.
+DSP Report: register myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/tmp_product is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U48/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x1a4))'.
+DSP Report: register tmp_14_reg_12931_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_14_reg_12931_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U25/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x156))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_11_reg_12907_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U2/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg, operation Mode is: (A''*(B:0x3ff0c))'.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register tmp_12_reg_12913_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/tmp_product is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U10/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg, operation Mode is: (A''*(B:0x77))'.
+DSP Report: register tmp_1_reg_12887_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register tmp_1_reg_12887_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/tmp_product is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U3/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe94))'.
+DSP Report: register tmp_10_reg_12895_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_10_reg_12895_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U4/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe3f))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_9_reg_12874_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U19/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg, operation Mode is: (A''*(B:0x21c))'.
+DSP Report: register myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: register tmp_s_reg_12880_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/tmp_product is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U45/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x11a))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_8_reg_12868_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U13/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0xb5))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_5_reg_12843_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U31/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe5b))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_3_reg_12831_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U16/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg, operation Mode is: (A''*(B:0x3ff68))'.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register tmp_4_reg_12837_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/tmp_product is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U24/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U9/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A2*(B:0x3feb6))'.
+DSP Report: register data_V_read_int_reg_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U9/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U9/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U9/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U9/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U9/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A2*(B:0x159))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U26/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe1d))'.
+DSP Report: register tmp_13_reg_12922_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_13_reg_12922_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U22/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg, operation Mode is: (A''*(B:0x5e))'.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register tmp_11_reg_12907_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/tmp_product is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U38/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg, operation Mode is: (A''*(B:0x3b))'.
+DSP Report: register myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: register tmp_12_reg_12913_reg is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/tmp_product is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U39/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe96))'.
+DSP Report: register tmp_1_reg_12887_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_1_reg_12887_pp0_iter1_reg_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U44/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe88))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_9_reg_12874_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U30/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x1d1))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_s_reg_12880_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U27/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x11f))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_7_reg_12859_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U23/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe90))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_8_reg_12868_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U50/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x176))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_5_reg_12843_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U17/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0xfd))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_6_reg_12849_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U29/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0xeb))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_3_reg_12831_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U46/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg, operation Mode is: (A''*(B:0x3ffa6))'.
+DSP Report: register myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: register tmp_4_reg_12837_reg is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/tmp_product is absorbed into DSP myproject_axi_mul_8s_16s_24_2_0_U42/myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_7ns_16s_23_2_0_U5/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg, operation Mode is: (A2*(B:0x27))'.
+DSP Report: register data_V_read_int_reg_reg is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U5/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_7ns_16s_23_2_0_U5/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U5/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_7ns_16s_23_2_0_U5/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/tmp_product is absorbed into DSP myproject_axi_mul_7ns_16s_23_2_0_U5/myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe42))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_11_reg_12907_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U20/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x12e))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_9_reg_12874_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U11/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg, operation Mode is: (A2*(B:0x6d))'.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/tmp_product is absorbed into DSP myproject_axi_mul_8ns_16s_24_2_0_U8/myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe6e))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_s_reg_12880_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U34/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg, operation Mode is: (A''*(B:0x3ff2d))'.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register tmp_8_reg_12868_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/tmp_product is absorbed into DSP myproject_axi_mul_9s_16s_25_2_0_U33/myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg, operation Mode is: (A''*(B:0x3fe2d))'.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register tmp_5_reg_12843_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/tmp_product is absorbed into DSP myproject_axi_mul_10s_16s_26_2_0_U47/myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg, operation Mode is: (A''*(B:0x129))'.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register tmp_6_reg_12849_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/tmp_product is absorbed into DSP myproject_axi_mul_10ns_16s_26_2_0_U36/myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0xb6))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_3_reg_12831_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U7/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg, operation Mode is: (A''*(B:0x91))'.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register tmp_4_reg_12837_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/tmp_product is absorbed into DSP myproject_axi_mul_9ns_16s_25_2_0_U41/myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U/p_tmp_reg.
+DSP Report: Generating DSP myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg, operation Mode is: (A2*(B:0x22e))'.
+DSP Report: register myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: register myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+DSP Report: operator myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/tmp_product is absorbed into DSP myproject_axi_mul_11ns_16s_26_2_0_U1/myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U/p_tmp_reg.
+WARNING: [Synth 8-3331] design dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 has unconnected port ap_rst
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ap_CS_fsm_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1833.680 ; gain = 396.586 ; free physical = 133264 ; free virtual = 244899
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++--------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                       | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe28))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x1db))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x46))'    | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x1f3))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe3c))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x21c))'   | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3ff15))' | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0xc9))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe07))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x1d0))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0xdc))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x51))'    | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ff16))'  | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ffa2))'  | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x1a4))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x156))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3ff0c))' | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x77))'    | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe94))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe3f))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x21c))'   | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x11a))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0xb5))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe5b))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3ff68))' | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3feb6))'  | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x159))'    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe1d))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x5e))'    | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3b))'    | 16     | 7      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe96))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe88))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x1d1))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x11f))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe90))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x176))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0xfd))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0xeb))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3ffa6))' | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x27))'     | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe42))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x12e))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x6d))'     | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe6e))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3ff2d))' | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x3fe2d))' | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x129))'   | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0xb6))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A''*(B:0x91))'    | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x22e))'    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 1    | 0    | 
++--------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1833.680 ; gain = 396.586 ; free physical = 133187 ; free virtual = 244848
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1833.680 ; gain = 396.586 ; free physical = 133137 ; free virtual = 244772
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_26/ce  is driving 152 big block pins (URAM, BRAM and DSP loads). Created 16 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133100 ; free virtual = 244744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133098 ; free virtual = 244742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133109 ; free virtual = 244762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133107 ; free virtual = 244760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133099 ; free virtual = 244755
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133094 ; free virtual = 244751
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|myproject   | grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_26/tmp_13_reg_12922_pp0_iter2_reg_reg[15] | 3      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|myproject   | grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_26/tmp_10_reg_12895_pp0_iter2_reg_reg[15] | 3      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   240|
+|3     |DSP48E1 |    50|
+|4     |LUT1    |    68|
+|5     |LUT2    |   515|
+|6     |LUT3    |   370|
+|7     |LUT4    |   332|
+|8     |LUT5    |     9|
+|9     |LUT6    |    25|
+|10    |SRL16E  |    32|
+|11    |FDRE    |  1295|
+|12    |IBUF    |   260|
+|13    |OBUF    |    68|
++------+--------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------------------------+--------------------------------------------------+------+
+|      |Instance                                                      |Module                                            |Cells |
++------+--------------------------------------------------------------+--------------------------------------------------+------+
+|1     |top                                                           |                                                  |  3265|
+|2     |  grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_26 |dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 |  2925|
+|3     |    myproject_axi_mul_10ns_16s_26_2_0_U11                     |myproject_axi_mul_10ns_16s_26_2_0                 |     1|
+|4     |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_83      |     1|
+|5     |    myproject_axi_mul_10ns_16s_26_2_0_U13                     |myproject_axi_mul_10ns_16s_26_2_0_0               |     5|
+|6     |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_82      |     5|
+|7     |    myproject_axi_mul_10ns_16s_26_2_0_U17                     |myproject_axi_mul_10ns_16s_26_2_0_1               |     3|
+|8     |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_81      |     3|
+|9     |    myproject_axi_mul_10ns_16s_26_2_0_U2                      |myproject_axi_mul_10ns_16s_26_2_0_2               |     3|
+|10    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_80      |     3|
+|11    |    myproject_axi_mul_10ns_16s_26_2_0_U23                     |myproject_axi_mul_10ns_16s_26_2_0_3               |     1|
+|12    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_79      |     1|
+|13    |    myproject_axi_mul_10ns_16s_26_2_0_U25                     |myproject_axi_mul_10ns_16s_26_2_0_4               |     1|
+|14    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_78      |     1|
+|15    |    myproject_axi_mul_10ns_16s_26_2_0_U26                     |myproject_axi_mul_10ns_16s_26_2_0_5               |     1|
+|16    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_77      |     1|
+|17    |    myproject_axi_mul_10ns_16s_26_2_0_U27                     |myproject_axi_mul_10ns_16s_26_2_0_6               |     1|
+|18    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_76      |     1|
+|19    |    myproject_axi_mul_10ns_16s_26_2_0_U36                     |myproject_axi_mul_10ns_16s_26_2_0_7               |     1|
+|20    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_75      |     1|
+|21    |    myproject_axi_mul_10ns_16s_26_2_0_U37                     |myproject_axi_mul_10ns_16s_26_2_0_8               |     1|
+|22    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_74      |     1|
+|23    |    myproject_axi_mul_10ns_16s_26_2_0_U49                     |myproject_axi_mul_10ns_16s_26_2_0_9               |     2|
+|24    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_73      |     2|
+|25    |    myproject_axi_mul_10ns_16s_26_2_0_U6                      |myproject_axi_mul_10ns_16s_26_2_0_10              |     3|
+|26    |      myproject_axi_mul_10ns_16s_26_2_0_MulnS_1_U             |myproject_axi_mul_10ns_16s_26_2_0_MulnS_1         |     3|
+|27    |    myproject_axi_mul_10s_16s_26_2_0_U14                      |myproject_axi_mul_10s_16s_26_2_0                  |     1|
+|28    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_72       |     1|
+|29    |    myproject_axi_mul_10s_16s_26_2_0_U16                      |myproject_axi_mul_10s_16s_26_2_0_11               |     1|
+|30    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_71       |     1|
+|31    |    myproject_axi_mul_10s_16s_26_2_0_U19                      |myproject_axi_mul_10s_16s_26_2_0_12               |     1|
+|32    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_70       |     1|
+|33    |    myproject_axi_mul_10s_16s_26_2_0_U20                      |myproject_axi_mul_10s_16s_26_2_0_13               |     3|
+|34    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_69       |     3|
+|35    |    myproject_axi_mul_10s_16s_26_2_0_U22                      |myproject_axi_mul_10s_16s_26_2_0_14               |     5|
+|36    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_68       |     5|
+|37    |    myproject_axi_mul_10s_16s_26_2_0_U30                      |myproject_axi_mul_10s_16s_26_2_0_15               |     1|
+|38    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_67       |     1|
+|39    |    myproject_axi_mul_10s_16s_26_2_0_U34                      |myproject_axi_mul_10s_16s_26_2_0_16               |     1|
+|40    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_66       |     1|
+|41    |    myproject_axi_mul_10s_16s_26_2_0_U35                      |myproject_axi_mul_10s_16s_26_2_0_17               |     1|
+|42    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_65       |     1|
+|43    |    myproject_axi_mul_10s_16s_26_2_0_U4                       |myproject_axi_mul_10s_16s_26_2_0_18               |     1|
+|44    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_64       |     1|
+|45    |    myproject_axi_mul_10s_16s_26_2_0_U43                      |myproject_axi_mul_10s_16s_26_2_0_19               |     1|
+|46    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_63       |     1|
+|47    |    myproject_axi_mul_10s_16s_26_2_0_U44                      |myproject_axi_mul_10s_16s_26_2_0_20               |     1|
+|48    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_62       |     1|
+|49    |    myproject_axi_mul_10s_16s_26_2_0_U47                      |myproject_axi_mul_10s_16s_26_2_0_21               |     1|
+|50    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_61       |     1|
+|51    |    myproject_axi_mul_10s_16s_26_2_0_U50                      |myproject_axi_mul_10s_16s_26_2_0_22               |     1|
+|52    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3_60       |     1|
+|53    |    myproject_axi_mul_10s_16s_26_2_0_U9                       |myproject_axi_mul_10s_16s_26_2_0_23               |     1|
+|54    |      myproject_axi_mul_10s_16s_26_2_0_MulnS_3_U              |myproject_axi_mul_10s_16s_26_2_0_MulnS_3          |     1|
+|55    |    myproject_axi_mul_11ns_16s_26_2_0_U1                      |myproject_axi_mul_11ns_16s_26_2_0                 |     5|
+|56    |      myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U             |myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_59      |     5|
+|57    |    myproject_axi_mul_11ns_16s_26_2_0_U12                     |myproject_axi_mul_11ns_16s_26_2_0_24              |     1|
+|58    |      myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U             |myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_58      |     1|
+|59    |    myproject_axi_mul_11ns_16s_26_2_0_U45                     |myproject_axi_mul_11ns_16s_26_2_0_25              |     1|
+|60    |      myproject_axi_mul_11ns_16s_26_2_0_MulnS_0_U             |myproject_axi_mul_11ns_16s_26_2_0_MulnS_0         |     1|
+|61    |    myproject_axi_mul_7ns_16s_23_2_0_U39                      |myproject_axi_mul_7ns_16s_23_2_0                  |     1|
+|62    |      myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U              |myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_57       |     1|
+|63    |    myproject_axi_mul_7ns_16s_23_2_0_U5                       |myproject_axi_mul_7ns_16s_23_2_0_26               |     5|
+|64    |      myproject_axi_mul_7ns_16s_23_2_0_MulnS_4_U              |myproject_axi_mul_7ns_16s_23_2_0_MulnS_4          |     5|
+|65    |    myproject_axi_mul_8ns_16s_24_2_0_U15                      |myproject_axi_mul_8ns_16s_24_2_0                  |     2|
+|66    |      myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U              |myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_56       |     2|
+|67    |    myproject_axi_mul_8ns_16s_24_2_0_U21                      |myproject_axi_mul_8ns_16s_24_2_0_27               |     1|
+|68    |      myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U              |myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_55       |     1|
+|69    |    myproject_axi_mul_8ns_16s_24_2_0_U3                       |myproject_axi_mul_8ns_16s_24_2_0_28               |     1|
+|70    |      myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U              |myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_54       |     1|
+|71    |    myproject_axi_mul_8ns_16s_24_2_0_U38                      |myproject_axi_mul_8ns_16s_24_2_0_29               |     3|
+|72    |      myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U              |myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_53       |     3|
+|73    |    myproject_axi_mul_8ns_16s_24_2_0_U8                       |myproject_axi_mul_8ns_16s_24_2_0_30               |    15|
+|74    |      myproject_axi_mul_8ns_16s_24_2_0_MulnS_2_U              |myproject_axi_mul_8ns_16s_24_2_0_MulnS_2          |    15|
+|75    |    myproject_axi_mul_8s_16s_24_2_0_U42                       |myproject_axi_mul_8s_16s_24_2_0                   |     1|
+|76    |      myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U               |myproject_axi_mul_8s_16s_24_2_0_MulnS_7_52        |     1|
+|77    |    myproject_axi_mul_8s_16s_24_2_0_U48                       |myproject_axi_mul_8s_16s_24_2_0_31                |     1|
+|78    |      myproject_axi_mul_8s_16s_24_2_0_MulnS_7_U               |myproject_axi_mul_8s_16s_24_2_0_MulnS_7           |     1|
+|79    |    myproject_axi_mul_9ns_16s_25_2_0_U18                      |myproject_axi_mul_9ns_16s_25_2_0                  |     2|
+|80    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_51       |     2|
+|81    |    myproject_axi_mul_9ns_16s_25_2_0_U29                      |myproject_axi_mul_9ns_16s_25_2_0_32               |     1|
+|82    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_50       |     1|
+|83    |    myproject_axi_mul_9ns_16s_25_2_0_U31                      |myproject_axi_mul_9ns_16s_25_2_0_33               |     2|
+|84    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_49       |     2|
+|85    |    myproject_axi_mul_9ns_16s_25_2_0_U32                      |myproject_axi_mul_9ns_16s_25_2_0_34               |     3|
+|86    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_48       |     3|
+|87    |    myproject_axi_mul_9ns_16s_25_2_0_U41                      |myproject_axi_mul_9ns_16s_25_2_0_35               |     2|
+|88    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_47       |     2|
+|89    |    myproject_axi_mul_9ns_16s_25_2_0_U46                      |myproject_axi_mul_9ns_16s_25_2_0_36               |     2|
+|90    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_46       |     2|
+|91    |    myproject_axi_mul_9ns_16s_25_2_0_U7                       |myproject_axi_mul_9ns_16s_25_2_0_37               |     1|
+|92    |      myproject_axi_mul_9ns_16s_25_2_0_MulnS_5_U              |myproject_axi_mul_9ns_16s_25_2_0_MulnS_5          |     1|
+|93    |    myproject_axi_mul_9s_16s_25_2_0_U10                       |myproject_axi_mul_9s_16s_25_2_0                   |     1|
+|94    |      myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U               |myproject_axi_mul_9s_16s_25_2_0_MulnS_6_45        |     1|
+|95    |    myproject_axi_mul_9s_16s_25_2_0_U24                       |myproject_axi_mul_9s_16s_25_2_0_38                |     1|
+|96    |      myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U               |myproject_axi_mul_9s_16s_25_2_0_MulnS_6_44        |     1|
+|97    |    myproject_axi_mul_9s_16s_25_2_0_U28                       |myproject_axi_mul_9s_16s_25_2_0_39                |     3|
+|98    |      myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U               |myproject_axi_mul_9s_16s_25_2_0_MulnS_6_43        |     3|
+|99    |    myproject_axi_mul_9s_16s_25_2_0_U33                       |myproject_axi_mul_9s_16s_25_2_0_40                |     2|
+|100   |      myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U               |myproject_axi_mul_9s_16s_25_2_0_MulnS_6_42        |     2|
+|101   |    myproject_axi_mul_9s_16s_25_2_0_U40                       |myproject_axi_mul_9s_16s_25_2_0_41                |     3|
+|102   |      myproject_axi_mul_9s_16s_25_2_0_MulnS_6_U               |myproject_axi_mul_9s_16s_25_2_0_MulnS_6           |     3|
++------+--------------------------------------------------------------+--------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133091 ; free virtual = 244748
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.617 ; gain = 402.523 ; free physical = 133115 ; free virtual = 244776
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.625 ; gain = 402.523 ; free physical = 133191 ; free virtual = 244848
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1852.492 ; gain = 0.000 ; free physical = 132904 ; free virtual = 244560
+INFO: [Netlist 29-17] Analyzing 290 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'myproject' is not ideal for floorplanning, since the cellview 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1981.207 ; gain = 0.000 ; free physical = 132816 ; free virtual = 244473
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+108 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1981.207 ; gain = 544.195 ; free physical = 132943 ; free virtual = 244602
+# report_utilization -file vivado_synth.rpt
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 21 12:07:44 2021...

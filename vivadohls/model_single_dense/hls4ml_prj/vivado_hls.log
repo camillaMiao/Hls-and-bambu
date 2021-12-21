@@ -1,0 +1,906 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'li' on host 'tennin.deib.polimi.it' (Linux_x86_64 version 5.15.0-2-amd64) on Fri Dec 17 12:23:55 CET 2021
+INFO: [HLS 200-10] On os Debian GNU/Linux 11 (bullseye)
+INFO: [HLS 200-10] In directory '/home/li/vivadohls/model_single_dense/hls4ml_prj'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1'.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xc7vx690t-ffg1930-3'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+***** C SIMULATION *****
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../myproject_test.cpp in debug mode
+   Compiling ../../../../firmware/myproject.cpp in debug mode
+   Generating csim.exe
+INFO: Unable to open input/predictions file, using default input.
+0 0 0 0 
+INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+***** C SIMULATION COMPLETED IN 0h0m4s *****
+***** C/RTL SYNTHESIS *****
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 863.289 ; gain = 459.035 ; free physical = 151950 ; free virtual = 247528
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 863.289 ; gain = 459.035 ; free physical = 151950 ; free virtual = 247528
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:57).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:96).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'myproject' (firmware/myproject.cpp:56).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 931.727 ; gain = 527.473 ; free physical = 151787 ; free virtual = 247375
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:56) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:125) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 931.727 ; gain = 527.473 ; free physical = 151746 ; free virtual = 247339
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:39:55).
+INFO: [HLS 200-489] Unrolling loop 'Product1' (firmware/nnet_utils/nnet_dense_latency.h:85) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Product2' (firmware/nnet_utils/nnet_dense_latency.h:90) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'ResetAccum' (firmware/nnet_utils/nnet_dense_latency.h:101) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Accum1' (firmware/nnet_utils/nnet_dense_latency.h:109) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Accum2' (firmware/nnet_utils/nnet_dense_latency.h:113) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_latency.h:120) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [XFORM 203-131] Reshaping array 'dense_1_input.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_out.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:56) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_dense_latency.h:125) automatically.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'(firmware/nnet_utils/nnet_dense_latency.h:45:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0' by setting 'weights.V' to 'w2.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0'(firmware/nnet_utils/nnet_dense_latency.h:45:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0' by setting 'biases[0].V' to 'b2.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0'(firmware/nnet_utils/nnet_dense_latency.h:45:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0' by setting 'biases[1].V' to 'b2.V.1'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0'(firmware/nnet_utils/nnet_dense_latency.h:45:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0.0' by setting 'biases[2].V' to 'b2.V.2'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0.0'(firmware/nnet_utils/nnet_dense_latency.h:45:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0.0.0' by setting 'biases[3].V' to 'b2.V.3'.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:45:1)...60 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 931.727 ; gain = 527.473 ; free physical = 151689 ; free virtual = 247288
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>.0.0.0.0.0' to 'dense_latency<ap_fixed,ap_fixed,config2>.0.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:45:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 931.727 ; gain = 527.473 ; free physical = 151686 ; free virtual = 247286
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config2>.0.0.0.0.0' to 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config2>.0.0.0.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.16 seconds; current allocated memory: 249.185 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 250.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 250.977 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 251.122 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 253.249 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/dense_1_input_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer2_out_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer2_out_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer2_out_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer2_out_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/const_size_in_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/const_size_out_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 258.679 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 261.10 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1055.289 ; gain = 651.035 ; free physical = 151629 ; free virtual = 247239
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
+***** C/RTL SYNTHESIS COMPLETED IN 0h0m24s *****
+***** C/RTL SIMULATION *****
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_myproject.cpp
+   Compiling myproject.cpp_pre.cpp.tb.cpp
+   Compiling myproject_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: Unable to open input/predictions file, using default input.
+0 0 0 0 
+INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_top glbl -prj myproject.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject -debug wave 
+Multi-threading is on. Using 54 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dense_latency_ap_fixed_ap_fixed_...
+Compiling module xil_defaultlib.myproject
+Compiling module xil_defaultlib.apatb_myproject_top
+Compiling module work.glbl
+Built simulation snapshot myproject
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec 17 12:24:45 2021...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/myproject/xsim_script.tcl
+# xsim {myproject} -autoloadwcfg -tclbatch {myproject.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source myproject.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set const_size_out_1_group [add_wave_group const_size_out_1(wire) -into $coutputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/const_size_out_1_ap_vld -into $const_size_out_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/const_size_out_1 -into $const_size_out_1_group -radix hex
+## set const_size_in_1_group [add_wave_group const_size_in_1(wire) -into $coutputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/const_size_in_1_ap_vld -into $const_size_in_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/const_size_in_1 -into $const_size_in_1_group -radix hex
+## set layer2_out_group [add_wave_group layer2_out(wire) -into $coutputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_3_V_ap_vld -into $layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_3_V -into $layer2_out_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_2_V_ap_vld -into $layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_2_V -into $layer2_out_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_1_V_ap_vld -into $layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_1_V -into $layer2_out_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_0_V_ap_vld -into $layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_0_V -into $layer2_out_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set dense_1_input_group [add_wave_group dense_1_input(wire) -into $cinputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/dense_1_input_V -into $dense_1_input_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/dense_1_input_V_ap_vld -into $dense_1_input_group -color #ffff00 -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_start -into $blocksiggroup
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_done -into $blocksiggroup
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_idle -into $blocksiggroup
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_myproject_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_dense_1_input_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_layer2_out_0_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_layer2_out_1_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_layer2_out_2_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_layer2_out_3_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_const_size_in_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_const_size_out_1 -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_const_size_out_1_group [add_wave_group const_size_out_1(wire) -into $tbcoutputgroup]
+## add_wave /apatb_myproject_top/const_size_out_1_ap_vld -into $tb_const_size_out_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/const_size_out_1 -into $tb_const_size_out_1_group -radix hex
+## set tb_const_size_in_1_group [add_wave_group const_size_in_1(wire) -into $tbcoutputgroup]
+## add_wave /apatb_myproject_top/const_size_in_1_ap_vld -into $tb_const_size_in_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/const_size_in_1 -into $tb_const_size_in_1_group -radix hex
+## set tb_layer2_out_group [add_wave_group layer2_out(wire) -into $tbcoutputgroup]
+## add_wave /apatb_myproject_top/layer2_out_3_V_ap_vld -into $tb_layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/layer2_out_3_V -into $tb_layer2_out_group -radix hex
+## add_wave /apatb_myproject_top/layer2_out_2_V_ap_vld -into $tb_layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/layer2_out_2_V -into $tb_layer2_out_group -radix hex
+## add_wave /apatb_myproject_top/layer2_out_1_V_ap_vld -into $tb_layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/layer2_out_1_V -into $tb_layer2_out_group -radix hex
+## add_wave /apatb_myproject_top/layer2_out_0_V_ap_vld -into $tb_layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/layer2_out_0_V -into $tb_layer2_out_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_dense_1_input_group [add_wave_group dense_1_input(wire) -into $tbcinputgroup]
+## add_wave /apatb_myproject_top/dense_1_input_V -into $tb_dense_1_input_group -radix hex
+## add_wave /apatb_myproject_top/dense_1_input_V_ap_vld -into $tb_dense_1_input_group -color #ffff00 -radix hex
+## save_wave_config myproject.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "113000"
+// RTL Simulation : 1 / 1 [100.00%] @ "138000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 157500 ps : File "/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 594
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Dec 17 12:24:54 2021...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: Unable to open input/predictions file, using default input.
+0 0 0 0 
+INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO:
+Report time       : Fri Dec 17 12:24:55 PM CET 2021.
+Solution          : solution1.
+Simulation tool   : xsim.
+
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+|          |          |                    Latency                    |                    Interval                   |
++   RTL    +  Status  +-----------------------------------------------+-----------------------------------------------+
+|          |          |      min      |      avg      |      max      |      min      |      avg      |      max      |
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+|      VHDL|        NA|             NA|             NA|             NA|             NA|             NA|             NA|
+|   Verilog|      Pass|              3|              3|              3|             NA|             NA|             NA|
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+
+***** C/RTL SIMULATION COMPLETED IN 0h0m29s *****
+***** VIVADO SYNTHESIS *****
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source vivado_synth.tcl
+# add_files myproject_prj/solution1/syn/vhdl
+# synth_design -top myproject -part xc7vx690t-3ffg1930
+Command: synth_design -top myproject -part xc7vx690t-3ffg1930
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3183018 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1606.574 ; gain = 161.715 ; free physical = 152111 ; free virtual = 247776
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myproject' [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:37]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:51]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:54]
+INFO: [Synth 8-3491] module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' declared at '/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:12' bound to instance 'grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_96' of component 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0' (1#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'myproject' (2#1) [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/myproject.vhd:37]
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[15] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[14] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[13] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[12] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[11] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[10] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[9] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[8] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[7] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[6] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[5] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[4] driven by constant 1
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[3] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[2] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[1] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[0] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[15] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[14] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[13] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[12] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[11] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[10] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[9] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[8] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[7] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[6] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[5] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[4] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[3] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[2] driven by constant 1
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[1] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[0] driven by constant 0
+WARNING: [Synth 8-3331] design dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 has unconnected port ap_rst
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1669.324 ; gain = 224.465 ; free physical = 152131 ; free virtual = 247802
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1669.324 ; gain = 224.465 ; free physical = 152131 ; free virtual = 247802
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1930-3
+INFO: [Device 21-403] Loading part xc7vx690tffg1930-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1677.328 ; gain = 232.469 ; free physical = 152127 ; free virtual = 247799
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1716.422 ; gain = 271.562 ; free physical = 151997 ; free virtual = 247670
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   3 Input     23 Bit       Adders := 1     
+	   3 Input     22 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 12    
+	   2 Input     16 Bit       Adders := 8     
+	   5 Input     16 Bit       Adders := 4     
++---Registers : 
+	              256 Bit    Registers := 5     
+	               16 Bit    Registers := 116   
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module myproject 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   3 Input     23 Bit       Adders := 1     
+	   3 Input     22 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 12    
+	   2 Input     16 Bit       Adders := 8     
+	   5 Input     16 Bit       Adders := 4     
++---Registers : 
+	              256 Bit    Registers := 4     
+	               16 Bit    Registers := 116   
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'data_V_read_int_reg_reg[255:0]' into 'data_V_read_int_reg_reg[255:0]' [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:606]
+INFO: [Synth 8-4471] merging register 'data_V_read_int_reg_reg[255:0]' into 'data_V_read_int_reg_reg[255:0]' [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:606]
+INFO: [Synth 8-4471] merging register 'data_V_read_int_reg_reg[255:0]' into 'data_V_read_int_reg_reg[255:0]' [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:606]
+WARNING: [Synth 8-3936] Found unconnected internal register 'data_V_read_int_reg_reg' and it is trimmed from '256' to '240' bits. [/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/syn/vhdl/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.vhd:606]
+DSP Report: Generating DSP trunc_ln708_4_reg_16389_reg, operation Mode is: (A2*(B:0xa2))'.
+DSP Report: register trunc_ln708_4_reg_16389_reg is absorbed into DSP trunc_ln708_4_reg_16389_reg.
+DSP Report: register trunc_ln708_4_reg_16389_reg is absorbed into DSP trunc_ln708_4_reg_16389_reg.
+DSP Report: operator mul_ln1118_3_fu_262_p2 is absorbed into DSP trunc_ln708_4_reg_16389_reg.
+DSP Report: Generating DSP mul_ln1118_8_fu_318_p2, operation Mode is: A2*(B:0x3fdd1).
+DSP Report: register mul_ln1118_8_fu_318_p2 is absorbed into DSP mul_ln1118_8_fu_318_p2.
+DSP Report: operator mul_ln1118_8_fu_318_p2 is absorbed into DSP mul_ln1118_8_fu_318_p2.
+DSP Report: Generating DSP mul_ln1118_31_fu_268_p2, operation Mode is: A2*(B:0x3fec1).
+DSP Report: register mul_ln1118_31_fu_268_p2 is absorbed into DSP mul_ln1118_31_fu_268_p2.
+DSP Report: operator mul_ln1118_31_fu_268_p2 is absorbed into DSP mul_ln1118_31_fu_268_p2.
+DSP Report: Generating DSP mul_ln1118_27_fu_306_p2, operation Mode is: A2*(B:0x3feef).
+DSP Report: register mul_ln1118_27_fu_306_p2 is absorbed into DSP mul_ln1118_27_fu_306_p2.
+DSP Report: operator mul_ln1118_27_fu_306_p2 is absorbed into DSP mul_ln1118_27_fu_306_p2.
+DSP Report: Generating DSP trunc_ln708_43_reg_16589_reg, operation Mode is: (A2*(B:0x1b))'.
+DSP Report: register trunc_ln708_43_reg_16589_reg is absorbed into DSP trunc_ln708_43_reg_16589_reg.
+DSP Report: register trunc_ln708_43_reg_16589_reg is absorbed into DSP trunc_ln708_43_reg_16589_reg.
+DSP Report: operator mul_ln1118_37_fu_281_p2 is absorbed into DSP trunc_ln708_43_reg_16589_reg.
+DSP Report: Generating DSP mul_ln1118_34_fu_322_p2, operation Mode is: A2*(B:0x20d).
+DSP Report: register mul_ln1118_34_fu_322_p2 is absorbed into DSP mul_ln1118_34_fu_322_p2.
+DSP Report: operator mul_ln1118_34_fu_322_p2 is absorbed into DSP mul_ln1118_34_fu_322_p2.
+DSP Report: Generating DSP mul_ln1118_15_fu_307_p2, operation Mode is: A2*(B:0x222).
+DSP Report: register mul_ln1118_15_fu_307_p2 is absorbed into DSP mul_ln1118_15_fu_307_p2.
+DSP Report: operator mul_ln1118_15_fu_307_p2 is absorbed into DSP mul_ln1118_15_fu_307_p2.
+DSP Report: Generating DSP mul_ln1118_23_fu_278_p2, operation Mode is: A2*(B:0x119).
+DSP Report: register mul_ln1118_23_fu_278_p2 is absorbed into DSP mul_ln1118_23_fu_278_p2.
+DSP Report: operator mul_ln1118_23_fu_278_p2 is absorbed into DSP mul_ln1118_23_fu_278_p2.
+DSP Report: Generating DSP mul_ln1118_11_fu_300_p2, operation Mode is: A2*(B:0x3febc).
+DSP Report: register mul_ln1118_11_fu_300_p2 is absorbed into DSP mul_ln1118_11_fu_300_p2.
+DSP Report: operator mul_ln1118_11_fu_300_p2 is absorbed into DSP mul_ln1118_11_fu_300_p2.
+DSP Report: Generating DSP trunc_ln708_23_reg_16489_reg, operation Mode is: (A2*(B:0x3ffd4))'.
+DSP Report: register trunc_ln708_23_reg_16489_reg is absorbed into DSP trunc_ln708_23_reg_16489_reg.
+DSP Report: register trunc_ln708_23_reg_16489_reg is absorbed into DSP trunc_ln708_23_reg_16489_reg.
+DSP Report: operator mul_ln1118_19_fu_303_p2 is absorbed into DSP trunc_ln708_23_reg_16489_reg.
+DSP Report: Generating DSP mul_ln1118_45_fu_319_p2, operation Mode is: A2*(B:0x1b4).
+DSP Report: register mul_ln1118_45_fu_319_p2 is absorbed into DSP mul_ln1118_45_fu_319_p2.
+DSP Report: operator mul_ln1118_45_fu_319_p2 is absorbed into DSP mul_ln1118_45_fu_319_p2.
+DSP Report: Generating DSP mul_ln1118_51_fu_320_p2, operation Mode is: A2*(B:0x10f).
+DSP Report: register mul_ln1118_51_fu_320_p2 is absorbed into DSP mul_ln1118_51_fu_320_p2.
+DSP Report: operator mul_ln1118_51_fu_320_p2 is absorbed into DSP mul_ln1118_51_fu_320_p2.
+DSP Report: Generating DSP mul_ln1118_41_fu_315_p2, operation Mode is: A2*(B:0x3fe0a).
+DSP Report: register mul_ln1118_41_fu_315_p2 is absorbed into DSP mul_ln1118_41_fu_315_p2.
+DSP Report: operator mul_ln1118_41_fu_315_p2 is absorbed into DSP mul_ln1118_41_fu_315_p2.
+DSP Report: Generating DSP mul_ln1118_49_fu_279_p2, operation Mode is: A2*(B:0x14b).
+DSP Report: register mul_ln1118_49_fu_279_p2 is absorbed into DSP mul_ln1118_49_fu_279_p2.
+DSP Report: operator mul_ln1118_49_fu_279_p2 is absorbed into DSP mul_ln1118_49_fu_279_p2.
+DSP Report: Generating DSP mul_ln1118_9_fu_321_p2, operation Mode is: A2*(B:0x191).
+DSP Report: register mul_ln1118_8_fu_318_p2 is absorbed into DSP mul_ln1118_9_fu_321_p2.
+DSP Report: operator mul_ln1118_9_fu_321_p2 is absorbed into DSP mul_ln1118_9_fu_321_p2.
+DSP Report: Generating DSP mul_ln1118_fu_275_p2, operation Mode is: A2*(B:0x3fec7).
+DSP Report: register data_V_read_int_reg_reg is absorbed into DSP mul_ln1118_fu_275_p2.
+DSP Report: operator mul_ln1118_fu_275_p2 is absorbed into DSP mul_ln1118_fu_275_p2.
+DSP Report: Generating DSP mul_ln1118_32_fu_274_p2, operation Mode is: A2*(B:0x3fde2).
+DSP Report: register mul_ln1118_31_fu_268_p2 is absorbed into DSP mul_ln1118_32_fu_274_p2.
+DSP Report: operator mul_ln1118_32_fu_274_p2 is absorbed into DSP mul_ln1118_32_fu_274_p2.
+DSP Report: Generating DSP trunc_ln708_32_reg_16534_reg, operation Mode is: (A2*(B:0xb1))'.
+DSP Report: register mul_ln1118_27_fu_306_p2 is absorbed into DSP trunc_ln708_32_reg_16534_reg.
+DSP Report: register trunc_ln708_32_reg_16534_reg is absorbed into DSP trunc_ln708_32_reg_16534_reg.
+DSP Report: operator mul_ln1118_28_fu_291_p2 is absorbed into DSP trunc_ln708_32_reg_16534_reg.
+DSP Report: Generating DSP trunc_ln708_44_reg_16594_reg, operation Mode is: (A2*(B:0xd2))'.
+DSP Report: register trunc_ln708_43_reg_16589_reg is absorbed into DSP trunc_ln708_44_reg_16594_reg.
+DSP Report: register trunc_ln708_44_reg_16594_reg is absorbed into DSP trunc_ln708_44_reg_16594_reg.
+DSP Report: operator mul_ln1118_38_fu_324_p2 is absorbed into DSP trunc_ln708_44_reg_16594_reg.
+DSP Report: Generating DSP mul_ln1118_35_fu_293_p2, operation Mode is: A2*(B:0x190).
+DSP Report: register mul_ln1118_34_fu_322_p2 is absorbed into DSP mul_ln1118_35_fu_293_p2.
+DSP Report: operator mul_ln1118_35_fu_293_p2 is absorbed into DSP mul_ln1118_35_fu_293_p2.
+DSP Report: Generating DSP mul_ln1118_16_fu_310_p2, operation Mode is: A2*(B:0x182).
+DSP Report: register mul_ln1118_15_fu_307_p2 is absorbed into DSP mul_ln1118_16_fu_310_p2.
+DSP Report: operator mul_ln1118_16_fu_310_p2 is absorbed into DSP mul_ln1118_16_fu_310_p2.
+DSP Report: Generating DSP trunc_ln708_28_reg_16514_reg, operation Mode is: (A2*(B:0x3ff1b))'.
+DSP Report: register mul_ln1118_23_fu_278_p2 is absorbed into DSP trunc_ln708_28_reg_16514_reg.
+DSP Report: register trunc_ln708_28_reg_16514_reg is absorbed into DSP trunc_ln708_28_reg_16514_reg.
+DSP Report: operator mul_ln1118_24_fu_296_p2 is absorbed into DSP trunc_ln708_28_reg_16514_reg.
+DSP Report: Generating DSP trunc_ln708_16_reg_16454_reg, operation Mode is: (A2*(B:0xb6))'.
+DSP Report: register mul_ln1118_11_fu_300_p2 is absorbed into DSP trunc_ln708_16_reg_16454_reg.
+DSP Report: register trunc_ln708_16_reg_16454_reg is absorbed into DSP trunc_ln708_16_reg_16454_reg.
+DSP Report: operator mul_ln1118_12_fu_295_p2 is absorbed into DSP trunc_ln708_16_reg_16454_reg.
+DSP Report: Generating DSP mul_ln1118_20_fu_297_p2, operation Mode is: A2*(B:0x21e).
+DSP Report: register trunc_ln708_23_reg_16489_reg is absorbed into DSP mul_ln1118_20_fu_297_p2.
+DSP Report: operator mul_ln1118_20_fu_297_p2 is absorbed into DSP mul_ln1118_20_fu_297_p2.
+DSP Report: Generating DSP mul_ln1118_46_fu_314_p2, operation Mode is: A2*(B:0x12d).
+DSP Report: register mul_ln1118_45_fu_319_p2 is absorbed into DSP mul_ln1118_46_fu_314_p2.
+DSP Report: operator mul_ln1118_46_fu_314_p2 is absorbed into DSP mul_ln1118_46_fu_314_p2.
+DSP Report: Generating DSP trunc_ln708_60_reg_16674_reg, operation Mode is: (A2*(B:0x3ff3c))'.
+DSP Report: register mul_ln1118_51_fu_320_p2 is absorbed into DSP trunc_ln708_60_reg_16674_reg.
+DSP Report: register trunc_ln708_60_reg_16674_reg is absorbed into DSP trunc_ln708_60_reg_16674_reg.
+DSP Report: operator mul_ln1118_52_fu_284_p2 is absorbed into DSP trunc_ln708_60_reg_16674_reg.
+DSP Report: Generating DSP mul_ln1118_42_fu_265_p2, operation Mode is: A2*(B:0x3fed5).
+DSP Report: register mul_ln1118_41_fu_315_p2 is absorbed into DSP mul_ln1118_42_fu_265_p2.
+DSP Report: operator mul_ln1118_42_fu_265_p2 is absorbed into DSP mul_ln1118_42_fu_265_p2.
+DSP Report: Generating DSP mul_ln1118_4_fu_272_p2, operation Mode is: A2*(B:0x3fddf).
+DSP Report: register trunc_ln708_4_reg_16389_reg is absorbed into DSP mul_ln1118_4_fu_272_p2.
+DSP Report: operator mul_ln1118_4_fu_272_p2 is absorbed into DSP mul_ln1118_4_fu_272_p2.
+DSP Report: Generating DSP mul_ln1118_10_fu_308_p2, operation Mode is: A2*(B:0x3fe48).
+DSP Report: register mul_ln1118_8_fu_318_p2 is absorbed into DSP mul_ln1118_10_fu_308_p2.
+DSP Report: operator mul_ln1118_10_fu_308_p2 is absorbed into DSP mul_ln1118_10_fu_308_p2.
+DSP Report: Generating DSP mul_ln1118_1_fu_267_p2, operation Mode is: A2*(B:0x199).
+DSP Report: register data_V_read_int_reg_reg is absorbed into DSP mul_ln1118_1_fu_267_p2.
+DSP Report: operator mul_ln1118_1_fu_267_p2 is absorbed into DSP mul_ln1118_1_fu_267_p2.
+DSP Report: Generating DSP mul_ln1118_6_fu_325_p2, operation Mode is: A2*(B:0x1b1).
+DSP Report: register mul_ln1118_6_fu_325_p2 is absorbed into DSP mul_ln1118_6_fu_325_p2.
+DSP Report: operator mul_ln1118_6_fu_325_p2 is absorbed into DSP mul_ln1118_6_fu_325_p2.
+DSP Report: Generating DSP mul_ln1118_29_fu_269_p2, operation Mode is: A2*(B:0x13e).
+DSP Report: register mul_ln1118_27_fu_306_p2 is absorbed into DSP mul_ln1118_29_fu_269_p2.
+DSP Report: operator mul_ln1118_29_fu_269_p2 is absorbed into DSP mul_ln1118_29_fu_269_p2.
+DSP Report: Generating DSP trunc_ln708_45_reg_16599_reg, operation Mode is: (A2*(B:0x5f))'.
+DSP Report: register trunc_ln708_43_reg_16589_reg is absorbed into DSP trunc_ln708_45_reg_16599_reg.
+DSP Report: register trunc_ln708_45_reg_16599_reg is absorbed into DSP trunc_ln708_45_reg_16599_reg.
+DSP Report: operator mul_ln1118_39_fu_288_p2 is absorbed into DSP trunc_ln708_45_reg_16599_reg.
+DSP Report: Generating DSP mul_ln1118_36_fu_280_p2, operation Mode is: A2*(B:0x191).
+DSP Report: register mul_ln1118_34_fu_322_p2 is absorbed into DSP mul_ln1118_36_fu_280_p2.
+DSP Report: operator mul_ln1118_36_fu_280_p2 is absorbed into DSP mul_ln1118_36_fu_280_p2.
+DSP Report: Generating DSP mul_ln1118_17_fu_301_p2, operation Mode is: A2*(B:0x3fe15).
+DSP Report: register mul_ln1118_15_fu_307_p2 is absorbed into DSP mul_ln1118_17_fu_301_p2.
+DSP Report: operator mul_ln1118_17_fu_301_p2 is absorbed into DSP mul_ln1118_17_fu_301_p2.
+DSP Report: Generating DSP trunc_ln708_29_reg_16519_reg, operation Mode is: (A2*(B:0x3ffd2))'.
+DSP Report: register mul_ln1118_23_fu_278_p2 is absorbed into DSP trunc_ln708_29_reg_16519_reg.
+DSP Report: register trunc_ln708_29_reg_16519_reg is absorbed into DSP trunc_ln708_29_reg_16519_reg.
+DSP Report: operator mul_ln1118_25_fu_316_p2 is absorbed into DSP trunc_ln708_29_reg_16519_reg.
+DSP Report: Generating DSP mul_ln1118_13_fu_292_p2, operation Mode is: A2*(B:0x3fe56).
+DSP Report: register mul_ln1118_11_fu_300_p2 is absorbed into DSP mul_ln1118_13_fu_292_p2.
+DSP Report: operator mul_ln1118_13_fu_292_p2 is absorbed into DSP mul_ln1118_13_fu_292_p2.
+DSP Report: Generating DSP mul_ln1118_21_fu_270_p2, operation Mode is: A2*(B:0x1b5).
+DSP Report: register trunc_ln708_23_reg_16489_reg is absorbed into DSP mul_ln1118_21_fu_270_p2.
+DSP Report: operator mul_ln1118_21_fu_270_p2 is absorbed into DSP mul_ln1118_21_fu_270_p2.
+DSP Report: Generating DSP mul_ln1118_47_fu_311_p2, operation Mode is: A2*(B:0x3feef).
+DSP Report: register mul_ln1118_45_fu_319_p2 is absorbed into DSP mul_ln1118_47_fu_311_p2.
+DSP Report: operator mul_ln1118_47_fu_311_p2 is absorbed into DSP mul_ln1118_47_fu_311_p2.
+DSP Report: Generating DSP trunc_ln708_61_reg_16679_reg, operation Mode is: (A2*(B:0x3ffbb))'.
+DSP Report: register mul_ln1118_51_fu_320_p2 is absorbed into DSP trunc_ln708_61_reg_16679_reg.
+DSP Report: register trunc_ln708_61_reg_16679_reg is absorbed into DSP trunc_ln708_61_reg_16679_reg.
+DSP Report: operator mul_ln1118_53_fu_290_p2 is absorbed into DSP trunc_ln708_61_reg_16679_reg.
+DSP Report: Generating DSP mul_ln1118_43_fu_271_p2, operation Mode is: A2*(B:0x223).
+DSP Report: register mul_ln1118_41_fu_315_p2 is absorbed into DSP mul_ln1118_43_fu_271_p2.
+DSP Report: operator mul_ln1118_43_fu_271_p2 is absorbed into DSP mul_ln1118_43_fu_271_p2.
+DSP Report: Generating DSP trunc_ln708_57_reg_16659_reg, operation Mode is: (A2*(B:0xe7))'.
+DSP Report: register mul_ln1118_49_fu_279_p2 is absorbed into DSP trunc_ln708_57_reg_16659_reg.
+DSP Report: register trunc_ln708_57_reg_16659_reg is absorbed into DSP trunc_ln708_57_reg_16659_reg.
+DSP Report: operator mul_ln1118_50_fu_285_p2 is absorbed into DSP trunc_ln708_57_reg_16659_reg.
+DSP Report: Generating DSP mul_ln1118_5_fu_277_p2, operation Mode is: A2*(B:0x1a2).
+DSP Report: register trunc_ln708_4_reg_16389_reg is absorbed into DSP mul_ln1118_5_fu_277_p2.
+DSP Report: operator mul_ln1118_5_fu_277_p2 is absorbed into DSP mul_ln1118_5_fu_277_p2.
+DSP Report: Generating DSP mul_ln1118_2_fu_263_p2, operation Mode is: A2*(B:0x137).
+DSP Report: register data_V_read_int_reg_reg is absorbed into DSP mul_ln1118_2_fu_263_p2.
+DSP Report: operator mul_ln1118_2_fu_263_p2 is absorbed into DSP mul_ln1118_2_fu_263_p2.
+DSP Report: Generating DSP trunc_ln708_10_reg_16424_reg, operation Mode is: (A2*(B:0x99))'.
+DSP Report: register mul_ln1118_6_fu_325_p2 is absorbed into DSP trunc_ln708_10_reg_16424_reg.
+DSP Report: register trunc_ln708_10_reg_16424_reg is absorbed into DSP trunc_ln708_10_reg_16424_reg.
+DSP Report: operator mul_ln1118_7_fu_317_p2 is absorbed into DSP trunc_ln708_10_reg_16424_reg.
+DSP Report: Generating DSP mul_ln1118_33_fu_264_p2, operation Mode is: A2*(B:0x3fe3c).
+DSP Report: register mul_ln1118_31_fu_268_p2 is absorbed into DSP mul_ln1118_33_fu_264_p2.
+DSP Report: operator mul_ln1118_33_fu_264_p2 is absorbed into DSP mul_ln1118_33_fu_264_p2.
+DSP Report: Generating DSP mul_ln1118_30_fu_313_p2, operation Mode is: A2*(B:0x224).
+DSP Report: register mul_ln1118_27_fu_306_p2 is absorbed into DSP mul_ln1118_30_fu_313_p2.
+DSP Report: operator mul_ln1118_30_fu_313_p2 is absorbed into DSP mul_ln1118_30_fu_313_p2.
+DSP Report: Generating DSP trunc_ln708_46_reg_16604_reg, operation Mode is: (A2*(B:0xfb))'.
+DSP Report: register trunc_ln708_43_reg_16589_reg is absorbed into DSP trunc_ln708_46_reg_16604_reg.
+DSP Report: register trunc_ln708_46_reg_16604_reg is absorbed into DSP trunc_ln708_46_reg_16604_reg.
+DSP Report: operator mul_ln1118_40_fu_276_p2 is absorbed into DSP trunc_ln708_46_reg_16604_reg.
+DSP Report: Generating DSP trunc_ln708_22_reg_16484_reg, operation Mode is: (A2*(B:0xb0))'.
+DSP Report: register mul_ln1118_15_fu_307_p2 is absorbed into DSP trunc_ln708_22_reg_16484_reg.
+DSP Report: register trunc_ln708_22_reg_16484_reg is absorbed into DSP trunc_ln708_22_reg_16484_reg.
+DSP Report: operator mul_ln1118_18_fu_286_p2 is absorbed into DSP trunc_ln708_22_reg_16484_reg.
+DSP Report: Generating DSP trunc_ln708_30_reg_16524_reg, operation Mode is: (A2*(B:0xc8))'.
+DSP Report: register mul_ln1118_23_fu_278_p2 is absorbed into DSP trunc_ln708_30_reg_16524_reg.
+DSP Report: register trunc_ln708_30_reg_16524_reg is absorbed into DSP trunc_ln708_30_reg_16524_reg.
+DSP Report: operator mul_ln1118_26_fu_273_p2 is absorbed into DSP trunc_ln708_30_reg_16524_reg.
+DSP Report: Generating DSP mul_ln1118_14_fu_312_p2, operation Mode is: A2*(B:0x3fe76).
+DSP Report: register mul_ln1118_11_fu_300_p2 is absorbed into DSP mul_ln1118_14_fu_312_p2.
+DSP Report: operator mul_ln1118_14_fu_312_p2 is absorbed into DSP mul_ln1118_14_fu_312_p2.
+DSP Report: Generating DSP mul_ln1118_22_fu_298_p2, operation Mode is: A2*(B:0x12a).
+DSP Report: register trunc_ln708_23_reg_16489_reg is absorbed into DSP mul_ln1118_22_fu_298_p2.
+DSP Report: operator mul_ln1118_22_fu_298_p2 is absorbed into DSP mul_ln1118_22_fu_298_p2.
+DSP Report: Generating DSP mul_ln1118_48_fu_287_p2, operation Mode is: A2*(B:0x3fddf).
+DSP Report: register mul_ln1118_45_fu_319_p2 is absorbed into DSP mul_ln1118_48_fu_287_p2.
+DSP Report: operator mul_ln1118_48_fu_287_p2 is absorbed into DSP mul_ln1118_48_fu_287_p2.
+DSP Report: Generating DSP mul_ln1118_54_fu_304_p2, operation Mode is: A2*(B:0x3fec6).
+DSP Report: register mul_ln1118_51_fu_320_p2 is absorbed into DSP mul_ln1118_54_fu_304_p2.
+DSP Report: operator mul_ln1118_54_fu_304_p2 is absorbed into DSP mul_ln1118_54_fu_304_p2.
+DSP Report: Generating DSP mul_ln1118_44_fu_323_p2, operation Mode is: A2*(B:0x3fe70).
+DSP Report: register mul_ln1118_41_fu_315_p2 is absorbed into DSP mul_ln1118_44_fu_323_p2.
+DSP Report: operator mul_ln1118_44_fu_323_p2 is absorbed into DSP mul_ln1118_44_fu_323_p2.
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[15] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[14] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[13] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[12] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[11] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[10] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[9] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[8] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[7] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[6] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[5] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[4] driven by constant 1
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[3] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[2] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[1] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_in_1[0] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[15] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[14] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[13] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[12] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[11] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[10] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[9] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[8] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[7] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[6] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[5] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[4] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[3] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[2] driven by constant 1
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[1] driven by constant 0
+WARNING: [Synth 8-3917] design myproject has port const_size_out_1[0] driven by constant 0
+WARNING: [Synth 8-3331] design dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 has unconnected port ap_rst
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ap_CS_fsm_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1999.992 ; gain = 555.133 ; free physical = 151330 ; free virtual = 247046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++--------------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                       | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xa2))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fdd1)    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fec1)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3feef)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x1b))'    | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x20d)      | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x222)      | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x119)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3febc)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ffd4))' | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x1b4)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x10f)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe0a)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x14b)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x191)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fec7)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fde2)    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xb1))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xd2))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x190)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x182)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ff1b))' | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xb6))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x21e)      | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x12d)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ff3c))' | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fed5)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fddf)    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe48)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x199)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x1b1)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x13e)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x5f))'    | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x191)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe15)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ffd2))' | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe56)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x1b5)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3feef)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x3ffbb))' | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x223)      | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xe7))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x1a2)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x137)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0x99))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe3c)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x224)      | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xfb))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xb0))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | (A2*(B:0xc8))'    | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe76)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x12a)      | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fddf)    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fec6)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 | A2*(B:0x3fe70)    | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1999.992 ; gain = 555.133 ; free physical = 151345 ; free virtual = 247043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.992 ; gain = 555.133 ; free physical = 151340 ; free virtual = 247040
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151336 ; free virtual = 247040
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151336 ; free virtual = 247040
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151332 ; free virtual = 247039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151331 ; free virtual = 247039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151330 ; free virtual = 247039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151325 ; free virtual = 247035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   159|
+|3     |DSP48E1 |    55|
+|4     |LUT1    |    92|
+|5     |LUT2    |   213|
+|6     |LUT3    |   590|
+|7     |LUT4    |   174|
+|8     |LUT5    |   170|
+|9     |LUT6    |   176|
+|10    |FDRE    |   866|
+|11    |IBUF    |   260|
+|12    |OBUF    |   105|
++------+--------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------------------------+--------------------------------------------------+------+
+|      |Instance                                                      |Module                                            |Cells |
++------+--------------------------------------------------------------+--------------------------------------------------+------+
+|1     |top                                                           |                                                  |  2861|
+|2     |  grp_dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0_fu_96 |dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0 |  2228|
++------+--------------------------------------------------------------+--------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151323 ; free virtual = 247034
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.961 ; gain = 559.102 ; free physical = 151319 ; free virtual = 247033
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2003.969 ; gain = 559.102 ; free physical = 151318 ; free virtual = 247032
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2015.867 ; gain = 0.000 ; free physical = 151382 ; free virtual = 247099
+INFO: [Netlist 29-17] Analyzing 214 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2153.457 ; gain = 0.000 ; free physical = 150931 ; free virtual = 246648
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 2153.457 ; gain = 716.605 ; free physical = 151056 ; free virtual = 246774
+# report_utilization -file vivado_synth.rpt
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 17 12:25:52 2021...
+***** VIVADO SYNTHESIS COMPLETED IN 0h1m7s *****
+INFO: [HLS 200-112] Total elapsed time: 127.8 seconds; peak allocated memory: 258.679 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Dec 17 12:26:03 2021...

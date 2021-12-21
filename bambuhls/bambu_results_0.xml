@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<bambu_results bambu_args="bambu -O3 -fPIC --std=c++14 --compiler=I386_CLANG11 -v4 -D__SYNTHESIS__ --top-fname=myproject --generate-interface=INFER --generate-tb=test_myproject.xml --simulator=VERILATOR --simulate model_single_dense/hls4ml_prj/firmware/myproject.cpp " bambu_version="Version: PandA 0.9.7-dev - Revision 50cb9328b7e885f87c45c88a801253f08b66c7de-openroad4" timestamp="2021-12-17T20:26:03" benchmark_name="myproject_0">
+  <CYCLES value="99"/>
+  <HLS_execution_time value="12.9399999999999999996"/>
+</bambu_results>

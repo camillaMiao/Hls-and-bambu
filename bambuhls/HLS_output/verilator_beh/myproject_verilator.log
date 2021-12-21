@@ -1,0 +1,30 @@
+Start reading vector           1's values from input file.
+
+Value found for input paddrdense_1_input_q0: 01000000000000000000000000000000
+Value found for input paddrlayer2_out_d0: 01000000000000000000000100000000
+Value found for input paddrconst_size_in_1: 01000000000000000000001000000000
+Value found for input paddrconst_size_out_1: 01000000000000000000001100000000
+Reading of vector values from input file completed. Simulation started.
+Value found for output layer2_out: 1111000001100100
+ layer2_out =     0   expected = 61540 
+
+Value found for output layer2_out: 1011010000110010
+ layer2_out =     0   expected = 46130 
+
+Value found for output layer2_out: 0000111111001100
+ layer2_out =     0   expected =  4044 
+
+Value found for output layer2_out: 1111010001000010
+ layer2_out =     0   expected = 62530 
+
+Value found for output const_size_in_1: 0000000000010000
+ const_size_in_1 =    16   expected =    16 
+
+Value found for output const_size_out_1: 0000000000000100
+ const_size_out_1 =     4   expected =     4 
+
+Simulation ended after                   99 cycles.
+
+Simulation FAILED
+
+- /home/li/bambuhls/HLS_output//simulation/testbench_myproject_tb.v:712: Verilog $finish

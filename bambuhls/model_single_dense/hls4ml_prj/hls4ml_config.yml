@@ -1,0 +1,16 @@
+Backend: Vivado
+Board: null
+ClockPeriod: 5
+HLSConfig:
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'model_single_dense/hls4ml_prj/keras_model.h5'
+OutputDir: model_single_dense/hls4ml_prj
+OutputPredictions: null
+ProjectName: myproject
+Stamp: Ef5c3dDc
+XilinxPart: xc7vx690t-3ffg1930

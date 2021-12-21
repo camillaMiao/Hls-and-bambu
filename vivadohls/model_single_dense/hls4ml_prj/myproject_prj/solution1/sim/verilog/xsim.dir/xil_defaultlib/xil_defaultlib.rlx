@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0.v,1639740264,systemVerilog,,,,dense_latency_ap_fixed_ap_fixed_config2_0_0_0_0_0,/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/myproject.autotb.v,1639740281,systemVerilog,,,,apatb_myproject_top,/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/li/vivadohls/model_single_dense/hls4ml_prj/myproject_prj/solution1/sim/verilog/myproject.v,1639740264,systemVerilog,,,,myproject,/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,

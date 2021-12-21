@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<memory>
+  <memory_allocation base_address="1073741824">
+    <object scope="myproject" name="w2" is_internal="T"/>
+    <object scope="myproject" name="internal_423023" is_internal="T"/>
+  </memory_allocation>
+</memory>

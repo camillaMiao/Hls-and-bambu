@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--cc --exe --Mdir /home/li/bambuhls/HLS_output//verilator_beh/verilator_obj -Wno-fatal -Wno-lint -sv -O3 --x-assign fast --x-initial fast --noassert -LDFLAGS -static /home/li/bambuhls/myproject.v /home/li/bambuhls/HLS_output//simulation/testbench_myproject_main.cpp /home/li/bambuhls/HLS_output//simulation/testbench_myproject_tb.v --top-module myproject_tb"
+S     23432  4200689  1640088499   904999251  1640088499   904999251 "/home/li/bambuhls/HLS_output//simulation/testbench_myproject_tb.v"
+T    397475  4200723  1640088500   145007679  1640088500   145007679 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb.cpp"
+T     22657  4200722  1640088500   141007538  1640088500   141007538 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb.h"
+T      1977  4200729  1640088500   145007679  1640088500   145007679 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb.mk"
+T       574  4200720  1640088500   137007399  1640088500   137007399 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb__Syms.cpp"
+T       836  4200721  1640088500   137007399  1640088500   137007399 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb__Syms.h"
+T       695  4200730  1640088500   145007679  1640088500   145007679 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb__ver.d"
+T         0        0  1640088500   145007679  1640088500   145007679 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb__verFiles.dat"
+T      1262  4200724  1640088500   145007679  1640088500   145007679 "/home/li/bambuhls/HLS_output//verilator_beh/verilator_obj/Vmyproject_tb_classes.mk"
+S    182108  4200643  1640088498   380945729  1640088498   380945729 "/home/li/bambuhls/myproject.v"
+S   7484256   131628  1638437787   417635991  1581264640           0 "/usr/bin/verilator_bin"

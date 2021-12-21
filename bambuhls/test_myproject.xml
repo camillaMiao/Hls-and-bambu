@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<function>
+  <testbench
+    dense_input="{97,115,100,102,102,101,97,103,101,119,97,72,65,70,69,70}"
+    layer2_out="{97,115,100,102}"
+    const_size_in_1="0"
+    const_size_out_1="0"
+  />
+</function>

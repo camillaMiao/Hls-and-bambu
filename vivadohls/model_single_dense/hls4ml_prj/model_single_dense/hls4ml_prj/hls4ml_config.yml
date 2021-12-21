@@ -1,0 +1,22 @@
+AcceleratorConfig:
+  Driver: python
+  Interface: axi_stream
+  Precision:
+    Input: float
+    Output: float
+Backend: VivadoAccelerator
+Board: pynq-z2
+ClockPeriod: 5
+HLSConfig:
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'model_single_dense/hls4ml_prj/keras_model.h5'
+OutputDir: model_single_dense/hls4ml_prj
+OutputPredictions: null
+ProjectName: myproject
+Stamp: E588C03D
+XilinxPart: xc7z020clg400-1

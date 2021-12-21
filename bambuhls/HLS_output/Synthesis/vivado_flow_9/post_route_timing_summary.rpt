@@ -1,0 +1,507 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Tue Dec 21 13:31:05 2021
+| Host         : tennin running 64-bit Debian GNU/Linux 11 (bullseye)
+| Command      : report_timing_summary -file /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/post_route_timing_summary.rpt
+| Design       : myproject
+| Device       : 7vx690t-ffg1930
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 34 input ports with partial input delay specified. (HIGH)
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.061        0.000                      0                  746        0.151        0.000                      0                  604        4.600        0.000                       0                   237  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clock  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clock               5.727        0.000                      0                  604        0.151        0.000                      0                  604        4.600        0.000                       0                   237  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock        To Clock              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------        --------              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+input port clock  clock                   9.499        0.000                      0                  163                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group        From Clock        To Clock              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------        ----------        --------              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**default**       clock                                     0.061        0.000                      0                   48                                                                        
+**default**       input port clock                          5.172        0.000                      0                    2                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clock
+  To Clock:  clock
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.727ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.151ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.600ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.727ns  (required time - arrival time)
+  Source:                 _myproject_i0/Datapath_i/array_423023_0/ARRAY_1D_STD_BRAM_NN_instance/multiple_elements.memory_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clock  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            _myproject_i0/Datapath_i/reg_2/reg_out1_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clock rise@10.000ns - clock rise@0.000ns)
+  Data Path Delay:        4.189ns  (logic 1.980ns (47.262%)  route 2.209ns (52.738%))
+  Logic Levels:           3  (CARRY4=2 LUT6=1)
+  Clock Path Skew:        -0.114ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.767ns = ( 14.767 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.198ns
+    Clock Pessimism Removal (CPR):    0.318ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AU30                                              0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AU30                 IBUF (Prop_ibuf_I_O)         0.546     0.546 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.681     3.227    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.080     3.307 r  clock_IBUF_BUFG_inst/O
+                         net (fo=238, routed)         1.892     5.198    _myproject_i0/Datapath_i/array_423023_0/ARRAY_1D_STD_BRAM_NN_instance/CLK
+    RAMB36_X3Y5          RAMB36E1                                     r  _myproject_i0/Datapath_i/array_423023_0/ARRAY_1D_STD_BRAM_NN_instance/multiple_elements.memory_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X3Y5          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[11])
+                                                      1.564     6.762 r  _myproject_i0/Datapath_i/array_423023_0/ARRAY_1D_STD_BRAM_NN_instance/multiple_elements.memory_reg/DOBDO[11]
+                         net (fo=4, routed)           1.314     8.076    _myproject_i0/Datapath_i/fu_myproject_422558_423149/DOBDO[11]
+    SLICE_X49Y20         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.184     8.260 r  _myproject_i0/Datapath_i/fu_myproject_422558_423149/out1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     8.260    _myproject_i0/Datapath_i/fu_myproject_422558_423149/out1_carry__1_n_0
+    SLICE_X49Y21         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.114     8.374 r  _myproject_i0/Datapath_i/fu_myproject_422558_423149/out1_carry__2/O[2]
+                         net (fo=2, routed)           0.895     9.270    _myproject_i0/Controller_i/O31[14]
+    SLICE_X50Y21         LUT6 (Prop_lut6_I5_O)        0.118     9.388 r  _myproject_i0/Controller_i/reg_out1[14]_i_1__4/O
+                         net (fo=1, routed)           0.000     9.388    _myproject_i0/Datapath_i/reg_2/reg_out1_reg[15]_0[14]
+    SLICE_X50Y21         FDRE                                         r  _myproject_i0/Datapath_i/reg_2/reg_out1_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     10.000    10.000 r  
+    AU30                                              0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    AU30                 IBUF (Prop_ibuf_I_O)         0.432    10.432 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.576    13.008    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.072    13.080 r  clock_IBUF_BUFG_inst/O
+                         net (fo=238, routed)         1.687    14.767    _myproject_i0/Datapath_i/reg_2/CLK
+    SLICE_X50Y21         FDRE                                         r  _myproject_i0/Datapath_i/reg_2/reg_out1_reg[14]/C
+                         clock pessimism              0.318    15.085    
+                         clock uncertainty           -0.035    15.049    
+    SLICE_X50Y21         FDRE (Setup_fdre_C_D)        0.065    15.114    _myproject_i0/Datapath_i/reg_2/reg_out1_reg[14]
+  -------------------------------------------------------------------
+                         required time                         15.114    
+                         arrival time                          -9.388    
+  -------------------------------------------------------------------
+                         slack                                  5.727    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.151ns  (arrival time - required time)
+  Source:                 _myproject_i0/Datapath_i/reg_5/reg_out1_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            _myproject_i0/Datapath_i/reg_33/reg_out1_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.195ns  (logic 0.100ns (51.262%)  route 0.095ns (48.738%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.012ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.899ns
+    Source Clock Delay      (SCD):    2.373ns
+    Clock Pessimism Removal (CPR):    0.514ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AU30                                              0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AU30                 IBUF (Prop_ibuf_I_O)         0.085     0.085 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.441     1.526    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.552 r  clock_IBUF_BUFG_inst/O
+                         net (fo=238, routed)         0.821     2.373    _myproject_i0/Datapath_i/reg_5/CLK
+    SLICE_X49Y29         FDRE                                         r  _myproject_i0/Datapath_i/reg_5/reg_out1_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y29         FDRE (Prop_fdre_C_Q)         0.100     2.473 r  _myproject_i0/Datapath_i/reg_5/reg_out1_reg[2]/Q
+                         net (fo=3, routed)           0.095     2.568    _myproject_i0/Datapath_i/reg_33/Q[2]
+    SLICE_X50Y29         FDRE                                         r  _myproject_i0/Datapath_i/reg_33/reg_out1_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AU30                                              0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AU30                 IBUF (Prop_ibuf_I_O)         0.251     0.251 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.517     1.768    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.798 r  clock_IBUF_BUFG_inst/O
+                         net (fo=238, routed)         1.101     2.899    _myproject_i0/Datapath_i/reg_33/CLK
+    SLICE_X50Y29         FDRE                                         r  _myproject_i0/Datapath_i/reg_33/reg_out1_reg[6]/C
+                         clock pessimism             -0.514     2.385    
+    SLICE_X50Y29         FDRE (Hold_fdre_C_D)         0.032     2.417    _myproject_i0/Datapath_i/reg_33/reg_out1_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -2.417    
+                         arrival time                           2.568    
+  -------------------------------------------------------------------
+                         slack                                  0.151    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clock
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK  n/a            2.426         10.000      7.574      DSP48_X2Y8    _myproject_i0/Datapath_i/fu_myproject_422558_422686/m1/out1/CLK
+Low Pulse Width   Slow    FDRE/C       n/a            0.400         5.000       4.600      SLICE_X50Y63  _myproject_i0/Datapath_i/reg_11/reg_out1_reg[2]/C
+High Pulse Width  Slow    FDRE/C       n/a            0.350         5.000       4.650      SLICE_X49Y39  _myproject_i0/Controller_i/_present_state_reg[10]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  input port clock
+  To Clock:  clock
+
+Setup :            0  Failing Endpoints,  Worst Slack        9.499ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             9.499ns  (required time - arrival time)
+  Source:                 start_port
+                            (input port)
+  Destination:            _myproject_i0/Datapath_i/reg_11/reg_out1_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        2.696ns  (logic 0.338ns (12.551%)  route 2.358ns (87.449%))
+  Logic Levels:           3  (IBUF=1 LUT6=2)
+  Clock Path Skew:        2.326ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.326ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    AJ31                                              0.000     0.000 r  start_port (IN)
+                         net (fo=0)                   0.000     0.000    start_port
+    AJ31                 IBUF (Prop_ibuf_I_O)         0.268     0.268 r  start_port_IBUF_inst/O
+                         net (fo=2, routed)           0.856     1.125    _myproject_i0/Controller_i/start_port_IBUF
+    SLICE_X50Y35         LUT6 (Prop_lut6_I2_O)        0.035     1.160 r  _myproject_i0/Controller_i/const_size_in_1_vld_OBUF_inst_i_1/O
+                         net (fo=37, routed)          1.037     2.196    _myproject_i0/Controller_i/_present_state_reg[4]_0
+    SLICE_X50Y52         LUT6 (Prop_lut6_I5_O)        0.035     2.231 r  _myproject_i0/Controller_i/reg_out1[31]_i_1__1/O
+                         net (fo=32, routed)          0.465     2.696    _myproject_i0/Datapath_i/reg_11/reg_out1_reg[0]_0[0]
+    SLICE_X50Y63         FDRE                                         r  _myproject_i0/Datapath_i/reg_11/reg_out1_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+    AU30                                              0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    AU30                 IBUF (Prop_ibuf_I_O)         0.085    10.085 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.441    11.526    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    11.552 r  clock_IBUF_BUFG_inst/O
+                         net (fo=238, routed)         0.774    12.326    _myproject_i0/Datapath_i/reg_11/CLK
+    SLICE_X50Y63         FDRE                                         r  _myproject_i0/Datapath_i/reg_11/reg_out1_reg[1]/C
+                         clock pessimism              0.000    12.326    
+                         clock uncertainty           -0.025    12.301    
+    SLICE_X50Y63         FDRE (Setup_fdre_C_CE)      -0.105    12.196    _myproject_i0/Datapath_i/reg_11/reg_out1_reg[1]
+  -------------------------------------------------------------------
+                         required time                         12.196    
+                         arrival time                          -2.696    
+  -------------------------------------------------------------------
+                         slack                                  9.499    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  clock
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.061ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.061ns  (required time - arrival time)
+  Source:                 _myproject_i0/Controller_i/_present_state_reg[6]_replica_2/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            dense_1_input_address0[2]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.799ns  (logic 2.236ns (46.605%)  route 2.562ns (53.395%))
+  Logic Levels:           3  (LUT6=2 OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -5.141ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns
+    Source Clock Delay      (SCD):    5.141ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AU30                                              0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AU30                 IBUF (Prop_ibuf_I_O)         0.546     0.546 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.681     3.227    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.080     3.307 r  clock_IBUF_BUFG_inst/O
+                         net (fo=238, routed)         1.834     5.141    _myproject_i0/Controller_i/CLK
+    SLICE_X50Y39         FDRE                                         r  _myproject_i0/Controller_i/_present_state_reg[6]_replica_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y39         FDRE (Prop_fdre_C_Q)         0.254     5.395 r  _myproject_i0/Controller_i/_present_state_reg[6]_replica_2/Q
+                         net (fo=1, routed)           0.344     5.738    _myproject_i0/Controller_i/_present_state[6]_repN_2
+    SLICE_X51Y39         LUT6 (Prop_lut6_I0_O)        0.043     5.781 r  _myproject_i0/Controller_i/dense_1_input_address0_OBUF[3]_inst_i_2/O
+                         net (fo=11, routed)          1.145     6.927    _myproject_i0/Controller_i/dense_1_input_address0_OBUF[3]_inst_i_2_n_0
+    SLICE_X54Y82         LUT6 (Prop_lut6_I4_O)        0.043     6.970 r  _myproject_i0/Controller_i/dense_1_input_address0_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.073     8.043    dense_1_input_address0_OBUF[2]
+    BB40                 OBUF (Prop_obuf_I_O)         1.896     9.939 r  dense_1_input_address0_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     9.939    dense_1_input_address0[2]
+    BB40                                                              r  dense_1_input_address0[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -9.939    
+  -------------------------------------------------------------------
+                         slack                                  0.061    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  input port clock
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.172ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.172ns  (required time - arrival time)
+  Source:                 start_port
+                            (input port)
+  Destination:            const_size_out_1_vld
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        4.828ns  (logic 2.362ns (48.909%)  route 2.467ns (51.091%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    AJ31                                              0.000     0.000 r  start_port (IN)
+                         net (fo=0)                   0.000     0.000    start_port
+    AJ31                 IBUF (Prop_ibuf_I_O)         0.563     0.563 r  start_port_IBUF_inst/O
+                         net (fo=2, routed)           1.224     1.788    _myproject_i0/Controller_i/start_port_IBUF
+    SLICE_X50Y35         LUT6 (Prop_lut6_I2_O)        0.043     1.831 r  _myproject_i0/Controller_i/const_size_in_1_vld_OBUF_inst_i_1/O
+                         net (fo=37, routed)          1.243     3.073    const_size_out_1_vld_OBUF
+    AN29                 OBUF (Prop_obuf_I_O)         1.755     4.828 r  const_size_out_1_vld_OBUF_inst/O
+                         net (fo=0)                   0.000     4.828    const_size_out_1_vld
+    AN29                                                              r  const_size_out_1_vld (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -4.828    
+  -------------------------------------------------------------------
+                         slack                                  5.172    
+
+
+
+
+
