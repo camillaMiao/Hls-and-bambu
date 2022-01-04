@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Dec 21 12:09:10 2021
+| Date         : Tue Jan  4 17:46:33 2022
 | Host         : tennin running 64-bit Debian GNU/Linux 11 (bullseye)
 | Command      : report_timing_summary -file .//post_synth_timing_summary.rpt
 | Design       : myproject

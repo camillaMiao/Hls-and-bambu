@@ -106,7 +106,7 @@ report_route_status -file $outputDir/post_route_status.rpt
 report_timing_summary -file $outputDir/post_route_timing_summary.rpt
 report_power -file $outputDir/post_route_power.rpt
 report_drc -file $outputDir/post_imp_drc.rpt
-report_utilization -file $outputDir/post_route_util.rpt
+report_utilization -file $outputDir/post_route_util.rpt -hierarchical -hierarchical_percentages
 dump_statistics
 close_design
 close_project
