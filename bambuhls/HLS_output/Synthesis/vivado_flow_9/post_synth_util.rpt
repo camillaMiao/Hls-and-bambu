@@ -1,13 +1,13 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
---------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Dec 21 13:27:18 2021
+| Date         : Tue Jan  4 17:23:25 2022
 | Host         : tennin running 64-bit Debian GNU/Linux 11 (bullseye)
-| Command      : report_utilization -file /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/post_synth_util.rpt
+| Command      : report_utilization -file /home/li/Hls-and-bambu/bambuhls/HLS_output//Synthesis/vivado_flow_9/post_synth_util.rpt
 | Design       : myproject
 | Device       : 7vx690tffg1930-3
 | Design State : Synthesized
---------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 

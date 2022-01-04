@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="/home/li/bambuhls/myproject.xpr">
+<Project Version="7" Minor="44" Path="/home/li/Hls-and-bambu/bambuhls/myproject.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a2c24256f6874c798437c1cb7d65c632"/>
+    <Option Name="Id" Val="d6794cac2abb4d22854f1977de8727e7"/>
     <Option Name="Part" Val="xc7vx690tffg1930-3"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

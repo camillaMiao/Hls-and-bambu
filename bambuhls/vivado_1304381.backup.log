@@ -1,0 +1,98 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jan  4 17:20:39 2022
+# Process ID: 1304381
+# Current directory: /home/li/Hls-and-bambu/bambuhls
+# Command line: vivado -mode batch -source /home/li/Hls-and-bambu/bambuhls/HLS_output/Synthesis/vivado_flow_9/vivado.tcl
+# Log file: /home/li/Hls-and-bambu/bambuhls/vivado.log
+# Journal file: /home/li/Hls-and-bambu/bambuhls/vivado.jou
+#-----------------------------------------------------------
+source /home/li/Hls-and-bambu/bambuhls/HLS_output/Synthesis/vivado_flow_9/vivado.tcl
+# proc dump_statistics {  } {
+#   set util_rpt [report_utilization -return_string]
+#   set LUTFFPairs 0
+#   set SliceRegisters 0
+#   set Slice 0
+#   set SliceLUTs 0
+#   set SliceLUTs1 0
+#   set BRAMFIFO36 0
+#   set BRAMFIFO18 0
+#   set BRAMFIFO36_star 0
+#   set BRAMFIFO18_star 0
+#   set BRAM18 0
+#   set BRAMFIFO 0
+#   set BIOB 0
+#   set DSPs 0
+#   set TotPower 0
+#   set design_slack 0
+#   set design_req 0
+#   set design_delay 0
+#   regexp --  {\s*LUT Flip Flop Pairs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore LUTFFPairs
+#   regexp --  {\s*Slice Registers\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceRegisters
+#   regexp --  {\s*Slice\s*\|\s*([^[:blank:]]+)} $util_rpt ignore Slice
+#   regexp --  {\s*Slice LUTs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceLUTs
+#   regexp --  {\s*Slice LUTs\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceLUTs1
+#   if { [expr {$SliceLUTs1 == 0}] } {
+#     set SliceLUTs1 $SliceLUTs
+#   }
+#   if { [expr {$LUTFFPairs == 0}] } {
+#     set LUTFFPairs $SliceLUTs1
+#     puts $SliceLUTs1
+#   }
+#   if { [expr {$SliceLUTs == 0}] } {
+#     set SliceLUTs $SliceLUTs1
+#   }
+#   regexp --  {\s*RAMB36/FIFO36\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO36
+#   regexp --  {\s*RAMB18/FIFO18\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO18
+#   regexp --  {\s*RAMB36/FIFO\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO36_star
+#   regexp --  {\s*RAMB18/FIFO\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO18_star
+#   regexp --  {\s*RAMB18\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAM18
+#   set BRAMFIFO [expr {(2 *$BRAMFIFO36) + $BRAMFIFO18 + (2*$BRAMFIFO36_star) + $BRAMFIFO18_star + $BRAM18}]
+#   regexp --  {\s*Bonded IOB\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BIOB
+#   regexp --  {\s*DSPs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore DSPs
+#   set power_rpt [report_power -return_string]
+#   regexp --  {\s*Total On-Chip Power \(W\)\s*\|\s*([^[:blank:]]+)} $power_rpt ignore TotPower
+#   set Timing_Paths [get_timing_paths -max_paths 1 -nworst 1 -setup]
+#   if { [expr {$Timing_Paths == ""}] } {
+#     set design_slack 0
+#     set design_req 0
+#   } else {
+#     set design_slack [get_property SLACK $Timing_Paths]
+#     set design_req [get_property REQUIREMENT  $Timing_Paths]
+#   }
+#   if { [expr {$design_slack == ""}] } {
+#     set design_slack 0
+#   }
+#   if { [expr {$design_req == ""}] } {
+#     set design_req 0
+#   }
+#   set design_delay [expr {$design_req - $design_slack}]
+#   file delete -force /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject_report.xml 
+#   set ofile_report [open /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject_report.xml w]
+#   puts $ofile_report "<?xml version=\"1.0\"?>"
+#   puts $ofile_report "<document>"
+#   puts $ofile_report "  <application>"
+#   puts $ofile_report "    <section stringID=\"XILINX_SYNTHESIS_SUMMARY\">"
+#   puts $ofile_report "      <item stringID=\"XILINX_LUT_FLIP_FLOP_PAIRS_USED\" value=\"$LUTFFPairs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE\" value=\"$Slice\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE_REGISTERS\" value=\"$SliceRegisters\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE_LUTS\" value=\"$SliceLUTs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_BLOCK_RAMFIFO\" value=\"$BRAMFIFO\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_IOPIN\" value=\"$BIOB\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_DSPS\" value=\"$DSPs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_POWER\" value=\"$TotPower\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_DESIGN_DELAY\" value=\"$design_delay\"/>"
+#   puts $ofile_report "    </section>"
+#   puts $ofile_report "  </application>"
+#   puts $ofile_report "</document>"
+#   close $ofile_report
+# };
+# set_param general.maxThreads 1
+# set outputDir /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9
+# file mkdir $outputDir
+# create_project myproject -part xc7vx690t-3ffg1930 -force
+# read_verilog /home/li/bambuhls/myproject.v
+ERROR: [Common 17-69] Command failed: File '/home/li/bambuhls/myproject.v' does not exist
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  4 17:20:51 2022...

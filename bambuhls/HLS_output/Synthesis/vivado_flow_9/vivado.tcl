@@ -57,8 +57,8 @@ proc dump_statistics {  } {
     set design_req 0
   }
   set design_delay [expr {$design_req - $design_slack}]
-  file delete -force /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject_report.xml 
-  set ofile_report [open /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject_report.xml w]
+  file delete -force /home/li/Hls-and-bambu/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject_report.xml 
+  set ofile_report [open /home/li/Hls-and-bambu/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject_report.xml w]
   puts $ofile_report "<?xml version=\"1.0\"?>"
   puts $ofile_report "<document>"
   puts $ofile_report "  <application>"
@@ -78,11 +78,11 @@ proc dump_statistics {  } {
   close $ofile_report
 }; #END PROC
 set_param general.maxThreads 1
-set outputDir /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9
+set outputDir /home/li/Hls-and-bambu/bambuhls/HLS_output//Synthesis/vivado_flow_9
 file mkdir $outputDir
 create_project myproject -part xc7vx690t-3ffg1930 -force
-read_verilog /home/li/bambuhls/myproject.v
-read_xdc /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject.sdc
+read_verilog /home/li/Hls-and-bambu/bambuhls/myproject.v
+read_xdc /home/li/Hls-and-bambu/bambuhls/HLS_output//Synthesis/vivado_flow_9/myproject.sdc
 synth_design -top myproject -part xc7vx690t-3ffg1930
 write_checkpoint -force $outputDir/post_synth.dcp
 report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
@@ -108,7 +108,7 @@ report_route_status -file $outputDir/post_route_status.rpt
 report_timing_summary -file $outputDir/post_route_timing_summary.rpt
 report_power -file $outputDir/post_route_power.rpt
 report_drc -file $outputDir/post_imp_drc.rpt
-report_utilization -file $outputDir/post_route_util.rpt
+report_utilization -file $outputDir/post_route_util.rpt -hierarchical -hierarchical_percentages
 dump_statistics
 close_design
 close_project

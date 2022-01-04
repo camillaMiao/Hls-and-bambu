@@ -1,14 +1,14 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Dec 21 13:29:07 2021
+| Date         : Tue Jan  4 17:25:17 2022
 | Host         : tennin running 64-bit Debian GNU/Linux 11 (bullseye)
-| Command      : report_clock_utilization -file /home/li/bambuhls/HLS_output//Synthesis/vivado_flow_9/clock_util.rpt
+| Command      : report_clock_utilization -file /home/li/Hls-and-bambu/bambuhls/HLS_output//Synthesis/vivado_flow_9/clock_util.rpt
 | Design       : myproject
 | Device       : 7vx690t-ffg1930
 | Speed File   : -3  PRODUCTION 1.11 2014-09-11
 | Design State : Fully Placed
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
 
 Clock Utilization Report
 
